@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotmart Script Generator</title>
+</head>
+<body>
+    <h2>Hotmart AI Script Generator</h2>
+    <form method="post">
+        Non Pwodwi: <input type="text" name="product"><br><br>
+        Tip Pwodwi:
+        <select name="category">
+            <option value="Fè lajan">Fè lajan</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Lang">Lang</option>
+        </select><br><br>
+        Odyans Vize: <input type="text" name="audience"><br><br>
+        Lang Script:
+        <select name="language">
+            <option value="Kreyòl">Kreyòl</option>
+            <option value="Angle">Angle</option>
+            <option value="Franse">Franse</option>
+        </select><br><br>
+        <input type="submit" value="Generate Script">
+    </form>
+
+    {% if script %}
+        <h3>Generated Script:</h3>
+        <p>{{ script }}</p>
+    {% endif %}
+</body>
+</html>
